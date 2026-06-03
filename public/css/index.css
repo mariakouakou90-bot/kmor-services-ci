@@ -313,3 +313,50 @@ nav ul li a {
     border-top: 1px solid rgba(255,255,255,0.2);
     padding-top: 15px;
 }
+
+
+/* RESPONSIVE MOBILE */
+@media screen and (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .slogan h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .services-container,
+    .cards-container,
+    .prestataires-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
