@@ -336,24 +336,27 @@ nav ul li a {
         border-radius: 20px;
     }
 
-    .slogan h1 {
-        font-size: 28px;
-        line-height: 1.4;
-    }
-
+    .slogan h1{
+    font-size: 18px;
+    line-height: 1.5;
+}
     .infos {
         flex-direction: column;
         gap: 15px;
     }
 
-    .conteneur {
-        flex-direction: column;
-        width: 100%;
-    }
+    .conteneur{
+    width: 100%;
+}
 
-    .conteneur input {
-        width: 90%;
-    }
+.conteneur input{
+    width: 80%;
+}
+
+.conteneur button{
+    width: 120px;
+    margin-top: 10px;
+}
 
     .services {
         flex-direction: column;
