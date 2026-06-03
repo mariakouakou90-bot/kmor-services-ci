@@ -268,19 +268,27 @@ Route::post('/admin/supprimer/{id}', function($id){
 });
 
 
-//note
+
+
+// Page avis
 Route::get('/avis', function () {
-    $avis = DB::table('avis')->orderBy('id_avis','desc')->get();
+
+    $avis = DB::table('avis')
+            ->orderBy('id_avis', 'desc')
+            ->get();
+
     return view('page.avis', compact('avis'));
 });
 
+// Enregistrer un avis
 Route::post('/avis', function (Request $request) {
-   DB::table('avis')->insert([
-    'nom' => 'Client',
-    'note' => $request->note,
-    'commentaire' => $request->commentaire,
-    'date_avis' => now()
-]);
 
-    return back()->with('success','Avis envoyé');
+    DB::table('avis')->insert([
+        'nom' => 'Client',
+        'note' => $request->note,
+        'commentaire' => $request->commentaire,
+        'date_avis' => now()
+    ]);
+
+    return back()->with('success', 'Avis envoyé avec succès');
 });
